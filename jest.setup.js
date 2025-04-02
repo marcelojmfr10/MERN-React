@@ -6,6 +6,10 @@
 // yarn add -D setimmediate
 // import 'setimmediate';
 
+import { TextEncoder, TextDecoder } from 'util';
+
+Object.assign(global, { TextDecoder, TextEncoder });
+
 // En caso de tener variables de entorno y aún no soporta el import.meta.env
 // yarn add -D dotenv
 require('dotenv').config({
